@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FavoritesVC.h
 //  Random Activity Generator
 //
 //  Created by Dan Pham on 1/8/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface FavoritesVC : UITableViewController
 
 
 @end

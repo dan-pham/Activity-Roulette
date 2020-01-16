@@ -14,6 +14,10 @@
 		C33AFCD323C69D7A008ABB95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33AFCD223C69D7A008ABB95 /* Assets.xcassets */; };
 		C33AFCD623C69D7A008ABB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33AFCD423C69D7A008ABB95 /* LaunchScreen.storyboard */; };
 		C33AFCD923C69D7A008ABB95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCD823C69D7A008ABB95 /* main.m */; };
+		C33AFCE023C6B3FE008ABB95 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCDF23C6B3FE008ABB95 /* SearchVC.m */; };
+		C33AFCE423C6B47A008ABB95 /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCE323C6B47A008ABB95 /* FavoritesVC.m */; };
+		C33AFCEE23C81213008ABB95 /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCED23C81213008ABB95 /* ActivityView.m */; };
+		C36B7FAC23CFF38300CCA898 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B7FAB23CFF38300CCA898 /* Activity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,14 @@
 		C33AFCD523C69D7A008ABB95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C33AFCD723C69D7A008ABB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C33AFCD823C69D7A008ABB95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C33AFCDF23C6B3FE008ABB95 /* SearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		C33AFCE123C6B41C008ABB95 /* SearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		C33AFCE223C6B464008ABB95 /* FavoritesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesVC.h; sourceTree = "<group>"; };
+		C33AFCE323C6B47A008ABB95 /* FavoritesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesVC.m; sourceTree = "<group>"; };
+		C33AFCED23C81213008ABB95 /* ActivityView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityView.m; sourceTree = "<group>"; };
+		C33AFCEF23C81223008ABB95 /* ActivityView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityView.h; sourceTree = "<group>"; };
+		C36B7FAB23CFF38300CCA898 /* Activity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		C36B7FAD23CFF39000CCA898 /* Activity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +73,13 @@
 		C33AFCC523C69D78008ABB95 /* Random Activity Generator */ = {
 			isa = PBXGroup;
 			children = (
+				C36B7FAE23CFF3A100CCA898 /* Model */,
+				C36B7FAF23CFF3B300CCA898 /* View */,
+				C36B7FB023CFF3CE00CCA898 /* Controller */,
 				C33AFCC623C69D78008ABB95 /* AppDelegate.h */,
 				C33AFCC723C69D78008ABB95 /* AppDelegate.m */,
 				C33AFCC923C69D78008ABB95 /* SceneDelegate.h */,
 				C33AFCCA23C69D78008ABB95 /* SceneDelegate.m */,
-				C33AFCCC23C69D78008ABB95 /* ViewController.h */,
-				C33AFCCD23C69D78008ABB95 /* ViewController.m */,
 				C33AFCCF23C69D78008ABB95 /* Main.storyboard */,
 				C33AFCD223C69D7A008ABB95 /* Assets.xcassets */,
 				C33AFCD423C69D7A008ABB95 /* LaunchScreen.storyboard */,
@@ -74,6 +87,37 @@
 				C33AFCD823C69D7A008ABB95 /* main.m */,
 			);
 			path = "Random Activity Generator";
+			sourceTree = "<group>";
+		};
+		C36B7FAE23CFF3A100CCA898 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C36B7FAD23CFF39000CCA898 /* Activity.h */,
+				C36B7FAB23CFF38300CCA898 /* Activity.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C36B7FAF23CFF3B300CCA898 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C33AFCEF23C81223008ABB95 /* ActivityView.h */,
+				C33AFCED23C81213008ABB95 /* ActivityView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C36B7FB023CFF3CE00CCA898 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C33AFCCC23C69D78008ABB95 /* ViewController.h */,
+				C33AFCCD23C69D78008ABB95 /* ViewController.m */,
+				C33AFCE123C6B41C008ABB95 /* SearchVC.h */,
+				C33AFCDF23C6B3FE008ABB95 /* SearchVC.m */,
+				C33AFCE223C6B464008ABB95 /* FavoritesVC.h */,
+				C33AFCE323C6B47A008ABB95 /* FavoritesVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36B7FAC23CFF38300CCA898 /* Activity.m in Sources */,
+				C33AFCE023C6B3FE008ABB95 /* SearchVC.m in Sources */,
 				C33AFCCE23C69D78008ABB95 /* ViewController.m in Sources */,
 				C33AFCC823C69D78008ABB95 /* AppDelegate.m in Sources */,
 				C33AFCD923C69D7A008ABB95 /* main.m in Sources */,
+				C33AFCEE23C81213008ABB95 /* ActivityView.m in Sources */,
 				C33AFCCB23C69D78008ABB95 /* SceneDelegate.m in Sources */,
+				C33AFCE423C6B47A008ABB95 /* FavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danpham.Random-Activity-Generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +363,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danpham.Random-Activity-Generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
