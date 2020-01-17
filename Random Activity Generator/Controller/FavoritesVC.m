@@ -32,6 +32,7 @@ NSString *cellId = @"cellId";
     [self setupActivities];
     
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
     [self.tableView reloadData];
 }
 
@@ -78,6 +79,22 @@ NSString *cellId = @"cellId";
     [self.view addSubview:activityView];
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.activities removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        SessionActivities *sessionActivity = [SessionActivities sharedInstance];
+        sessionActivity.sessionActivities = self.activities;
+        
+        [self.tableView reloadData];
+    }
 }
 
 @end

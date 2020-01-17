@@ -21,6 +21,7 @@
     FavoritesVC *favoritesVC = [FavoritesVC new];
     
     NSArray *tabBarVCs = @[searchVC, favoritesVC];
+    UITabBar.appearance.tintColor = [UIColor systemIndigoColor];
     
     [self setViewControllers:tabBarVCs];
     
