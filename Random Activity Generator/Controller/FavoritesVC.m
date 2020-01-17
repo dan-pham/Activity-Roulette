@@ -8,6 +8,7 @@
 
 #import "FavoritesVC.h"
 #import "Activity.h"
+#import "SessionActivities.h"
 
 @interface FavoritesVC ()
 
@@ -26,20 +27,16 @@ NSString *cellId = @"cellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor systemGray2Color];
     [self setupActivities];
     
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
+    [self.tableView reloadData];
 }
 
 - (void)setupActivities {
-    self.activities = NSMutableArray.new;
-    
-    Activity *activity = Activity.new;
-    activity.activityType = @"Cooking";
-    activity.activityDescription = @"Learn a new sushi roll";
-    [self.activities addObject:activity];
+    SessionActivities *sessionActivity = [SessionActivities sharedInstance];
+    self.activities = sessionActivity.sessionActivities;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

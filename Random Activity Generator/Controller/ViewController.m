@@ -10,8 +10,6 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSMutableArray<Activity *> *activities; // make static to access from activityview
-
 @end
 
 @implementation ViewController
@@ -29,6 +27,5 @@
     searchVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:0];
     favoritesVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:1];
 }
-
 
 @end

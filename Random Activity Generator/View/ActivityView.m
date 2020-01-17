@@ -7,6 +7,7 @@
 //
 
 #import "ActivityView.h"
+#import "SessionActivities.h"
 
 @interface ActivityView ()
 
@@ -20,19 +21,20 @@
 
 @synthesize activityType;
 @synthesize activityDescription;
-//@synthesize activity;
+
+NSString *actDescription = @"";
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        actDescription = self.activityDescription;
+        
         [self showActivityView:frame];
         [self configureExitButton];
         [self configureSaveButton];
         [self configureTitleLabel:self.activityType];
         [self configureDescriptionTextView:self.activityDescription];
-//        [self configureTitleLabel:self.activity.activityType];
-//        [self configureDescriptionLabel:self.activity.activityDescription];
     }
     return self;
 }
@@ -94,10 +96,12 @@
 
 - (void)saveActivity {
     Activity *activity = Activity.new;
-    activity.activityType = @"Cooking";
-    activity.activityDescription = @"Learn a new sushi roll";
-//    [self addObject:activity];
+    activity.activityType = self.activityType;
+    activity.activityDescription = actDescription;
     
+    SessionActivities *sessionActivity = [SessionActivities sharedInstance];
+    [sessionActivity.sessionActivities addObject:activity];
+
     [self dismissActivityView];
 }
 

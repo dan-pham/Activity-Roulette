@@ -17,6 +17,4 @@
 @property (assign, nonatomic) NSString *activityType;
 @property (assign, nonatomic) NSString *activityDescription;
 
-//@property (strong, nonatomic) Activity *activity;
-
 @end

@@ -210,7 +210,6 @@
         }
         
         NSString *boredDescription = boredJSON[@"activity"];
-        self.activityDescription = boredDescription;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.activityDescription = boredDescription;
@@ -224,13 +223,6 @@
     ActivityView *activityView = [ActivityView alloc];
     activityView.activityType = self.activityType;
     activityView.activityDescription = self.activityDescription;
-    
-//    ActivityView *activityView = Activity.new;
-//    activityView.activity.activityType = self.activityType;
-//    activityView.activity.activityDescription = self.activityDescription;
-    
-//    NSLog(@"self.activityType = %@", self.activityType);
-//    NSLog(@"activityView.activity.activityType = %@", activityView.activity.activityType);
     
     [activityView initWithFrame:self.view.frame];
     

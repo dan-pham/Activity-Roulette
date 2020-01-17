@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Activity.h"
 #import "SearchVC.h"
 #import "FavoritesVC.h"
 
 @interface ViewController : UITabBarController
-
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30EEE4C23D14CC500827078 /* SessionActivities.m in Sources */ = {isa = PBXBuildFile; fileRef = C30EEE4B23D14CC500827078 /* SessionActivities.m */; };
 		C33AFCC823C69D78008ABB95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCC723C69D78008ABB95 /* AppDelegate.m */; };
 		C33AFCCB23C69D78008ABB95 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCCA23C69D78008ABB95 /* SceneDelegate.m */; };
 		C33AFCCE23C69D78008ABB95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33AFCCD23C69D78008ABB95 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C30EEE4A23D14CB700827078 /* SessionActivities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionActivities.h; sourceTree = "<group>"; };
+		C30EEE4B23D14CC500827078 /* SessionActivities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionActivities.m; sourceTree = "<group>"; };
 		C33AFCC323C69D78008ABB95 /* Random Activity Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Random Activity Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33AFCC623C69D78008ABB95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C33AFCC723C69D78008ABB95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 			children = (
 				C36B7FAD23CFF39000CCA898 /* Activity.h */,
 				C36B7FAB23CFF38300CCA898 /* Activity.m */,
+				C30EEE4A23D14CB700827078 /* SessionActivities.h */,
+				C30EEE4B23D14CC500827078 /* SessionActivities.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36B7FAC23CFF38300CCA898 /* Activity.m in Sources */,
+				C30EEE4C23D14CC500827078 /* SessionActivities.m in Sources */,
 				C33AFCE023C6B3FE008ABB95 /* SearchVC.m in Sources */,
 				C33AFCCE23C69D78008ABB95 /* ViewController.m in Sources */,
 				C33AFCC823C69D78008ABB95 /* AppDelegate.m in Sources */,
