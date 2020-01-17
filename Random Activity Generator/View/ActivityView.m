@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) UIView *activityView;
 @property (nonatomic, strong) UIButton *exitButton;
-@property (nonatomic, strong) UIButton *saveButton;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "FavoritesVC.h"
 #import "Activity.h"
+#import "ActivityView.h"
 #import "SessionActivities.h"
 
 @interface FavoritesVC ()
@@ -50,6 +51,8 @@ NSString *cellId = @"cellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     
+    tableView.separatorColor = [UIColor systemGray2Color];
+    
     cell.backgroundColor = [UIColor systemIndigoColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
@@ -62,6 +65,19 @@ NSString *cellId = @"cellId";
     cell.detailTextLabel.text = activity.activityDescription;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ActivityView *activityView = [ActivityView alloc];
+    activityView.activityType = self.activities[indexPath.row].activityType;
+    activityView.activityDescription = self.activities[indexPath.row].activityDescription;
+    
+    [activityView initWithFrame:self.view.frame];
+    activityView.saveButton.hidden = YES;
+    
+    [self.view addSubview:activityView];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 @end
