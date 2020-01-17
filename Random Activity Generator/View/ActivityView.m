@@ -112,7 +112,7 @@ NSString *actDescription = @"";
 - (void)configureTitleLabel:(NSString *)title {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
-    self.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
+    self.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:28];
     self.titleLabel.textColor = UIColor.whiteColor;
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.titleLabel.minimumScaleFactor = 0.9;

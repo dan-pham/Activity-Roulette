@@ -27,7 +27,7 @@ NSString *cellId = @"cellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor systemGray2Color];
+    self.view.backgroundColor = [UIColor systemIndigoColor];
     [self setupActivities];
     
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
@@ -43,8 +43,18 @@ NSString *cellId = @"cellId";
     return self.activities.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    
+    cell.backgroundColor = [UIColor systemIndigoColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:16];
     
     Activity *activity = self.activities[indexPath.row];
     
