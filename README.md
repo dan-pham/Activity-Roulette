@@ -1,5 +1,5 @@
-# Random-Activity-Generator
-This repository contains the Random Activity Generator app, written in Objective-C. This app connects to the Bored API to query and return activities in JSON. 
+# Activity Roulette
+This repository contains the Activity Roulette app, written in Objective-C. This app connects to the Bored API to query and return activities in JSON. 
 
 ## Overview
 When the user opens the app, the user is presented with ten buttons on the search tab. Each button will send a different query to the Bored API. When the user taps on a button, the user will be presented with a view of a random activity in the category that was tapped. On this view, the category name and activity description can be seen. The user can choose to exit the activity or save the activity, which will add the activity into a runtime array.
